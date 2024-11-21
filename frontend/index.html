@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Invoice Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Freelancer Invoice Generator</h1>
+        <form id="invoice-form">
+            <div class="form-group">
+                <label for="freelancer-name">Freelancer Name:</label>
+                <input type="text" id="freelancer-name" name="freelancer_name" required>
+            </div>
+            <div class="form-group">
+                <label for="freelancer-address">Freelancer Address:</label>
+                <input type="text" id="freelancer-address" name="freelancer_address" required>
+            </div>
+            <div class="form-group">
+                <label for="client-name">Client Name:</label>
+                <input type="text" id="client-name" name="client_name" required>
+            </div>
+            <div class="form-group">
+                <label for="client-address">Client Address:</label>
+                <input type="text" id="client-address" name="client_address" required>
+            </div>
+            <div class="form-group">
+                <label for="invoice-number">Invoice Number:</label>
+                <input type="text" id="invoice-number" name="invoice_number" required>
+            </div>
+            <div class="form-group">
+                <label for="invoice-date">Invoice Date:</label>
+                <input type="date" id="invoice-date" name="date" required>
+            </div>
+            <h3>Invoice Items</h3>
+            <div id="items">
+                <div class="item">
+                    <input type="text" placeholder="Description" name="description[]" required>
+                    <input type="number" placeholder="Quantity" name="quantity[]" required>
+                    <input type="number" placeholder="Price" name="price[]" required>
+                </div>
+            </div>
+            <button type="button" id="add-item">Add Item</button>
+            <button type="submit">Generate Invoice</button>
+        </form>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
